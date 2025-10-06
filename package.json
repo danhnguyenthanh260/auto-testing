@@ -1,0 +1,16 @@
+{
+  "name": "autotest-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start:api": "json-server --watch db.json --port 3001"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.2.1"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

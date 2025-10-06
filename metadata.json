@@ -1,0 +1,5 @@
+{
+  "name": "AutoTest Platform",
+  "description": "A no-code/low-code platform for creating and managing automated tests for Web UI and APIs, designed for QA engineers, BAs, and non-technical team members.",
+  "requestFramePermissions": []
+}

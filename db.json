@@ -1,0 +1,181 @@
+{
+  "testCases": [
+    {
+      "id": "tc-001",
+      "name": "User Login - Valid Credentials",
+      "type": "UI",
+      "status": "Active",
+      "tags": [
+        "smoke",
+        "login"
+      ],
+      "lastRun": "Passed",
+      "lastRunDate": "2025-10-05 14:30",
+      "creator": "Alice",
+      "gitStatus": "Unmodified",
+      "history": [
+        {
+          "hash": "a1b2c3d",
+          "message": "Initial commit",
+          "author": "Alice",
+          "date": "2025-10-04"
+        },
+        {
+          "hash": "e4f5g6h",
+          "message": "Add assertions for login page",
+          "author": "Alice",
+          "date": "2025-10-05"
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-1",
+          "type": "Navigate",
+          "name": "Go to Login Page",
+          "target": "/login"
+        },
+        {
+          "id": "step-2",
+          "type": "Input",
+          "name": "Enter email",
+          "target": "#email",
+          "value": "test@example.com"
+        },
+        {
+          "id": "step-3",
+          "type": "Input",
+          "name": "Enter password",
+          "target": "#password",
+          "value": "password123"
+        },
+        {
+          "id": "step-4",
+          "type": "Click",
+          "name": "Click Login button",
+          "target": "button[type=\"submit\"]"
+        },
+        {
+          "id": "step-5",
+          "type": "Assert",
+          "name": "Assert Dashboard URL",
+          "target": "url.includes(\"/dashboard\")"
+        }
+      ]
+    },
+    {
+      "id": "tc-002",
+      "name": "User Login - Invalid Password",
+      "type": "UI",
+      "status": "Active",
+      "tags": [
+        "regression",
+        "login"
+      ],
+      "lastRun": "Passed",
+      "lastRunDate": "2025-10-05 14:30",
+      "creator": "Alice",
+      "gitStatus": "Unmodified",
+      "history": [
+        {
+          "hash": "a1b2c3d",
+          "message": "Initial commit",
+          "author": "Alice",
+          "date": "2025-10-04"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "id": "tc-003",
+      "name": "GET /products/:id",
+      "type": "API",
+      "status": "Active",
+      "tags": [
+        "api",
+        "products"
+      ],
+      "lastRun": "Failed",
+      "lastRunDate": "2025-10-05 12:00",
+      "creator": "Bob",
+      "gitStatus": "Unmodified",
+      "history": [],
+      "steps": []
+    },
+    {
+      "id": "tc-004",
+      "name": "Add Product to Cart",
+      "type": "UI",
+      "status": "Draft",
+      "tags": [
+        "cart",
+        "e2e"
+      ],
+      "lastRun": "Skipped",
+      "lastRunDate": "N/A",
+      "creator": "Charlie",
+      "gitStatus": "Unmodified",
+      "history": [],
+      "steps": []
+    },
+    {
+      "id": "tc-005",
+      "name": "POST /orders",
+      "type": "API",
+      "status": "Active",
+      "tags": [
+        "api",
+        "orders"
+      ],
+      "lastRun": "Passed",
+      "lastRunDate": "2025-10-05 14:30",
+      "creator": "Bob",
+      "gitStatus": "Unmodified",
+      "history": [],
+      "steps": []
+    },
+    {
+      "id": "tc-006",
+      "name": "User Profile Update",
+      "type": "UI",
+      "status": "Archived",
+      "tags": [
+        "profile"
+      ],
+      "lastRun": "Passed",
+      "lastRunDate": "2025-09-28 10:00",
+      "creator": "Alice",
+      "gitStatus": "Unmodified",
+      "history": [],
+      "steps": []
+    }
+  ],
+  "testSuites": [
+    {
+      "id": "suite-01",
+      "name": "Login Functionality",
+      "description": "All tests related to user authentication.",
+      "testCaseIds": [
+        "tc-001",
+        "tc-002"
+      ]
+    },
+    {
+      "id": "suite-02",
+      "name": "Full API Regression",
+      "description": "Runs all major API endpoint tests.",
+      "testCaseIds": [
+        "tc-003",
+        "tc-005"
+      ]
+    },
+    {
+      "id": "suite-03",
+      "name": "Smoke Test Suite",
+      "description": "A collection of critical path tests.",
+      "testCaseIds": [
+        "tc-001",
+        "tc-005"
+      ]
+    }
+  ]
+}
